@@ -1,0 +1,462 @@
+{
+  "counts": {
+    "baseline_predictions": 13500,
+    "baseline_rules": 5,
+    "complexity_pairs": 2700,
+    "error_analysis": 5370,
+    "main_judgments": 97200,
+    "matched_pair_sites": 5615,
+    "models": 6,
+    "pairs": 2700,
+    "perturbation_judgments": 71566,
+    "perturbation_variants": 35783,
+    "ppl": 4455,
+    "ppl_pairs": 2700,
+    "ppl_regressions": 90,
+    "repeat_judgments": 4790,
+    "repeat_pairs": 2395,
+    "scripts": 9
+  },
+  "files": {
+    "README.md": {
+      "bytes": 5440,
+      "sha256": "5968cb1c7d55b3d4de58df32283b1e93249e0d11fad71d1846c5faac2c98893e"
+    },
+    "data/baseline_features.jsonl.gz": {
+      "bytes": 255912,
+      "primary_key": [
+        "language",
+        "code_id"
+      ],
+      "rows": 4455,
+      "sha256": "d165e266c84b5cfc4d2aef200d203de4a28b8e3795c2518625e4539247ca1239"
+    },
+    "data/baseline_predictions.jsonl.gz": {
+      "bytes": 149909,
+      "primary_key": [
+        "rule",
+        "language",
+        "pair_id"
+      ],
+      "rows": 13500,
+      "sha256": "8e637bc0c382f8632cc0cbf0dc2849dccd3a24b966fecb685b645285079fad7c"
+    },
+    "data/code.jsonl.gz": {
+      "bytes": 4551807,
+      "primary_key": [
+        "language",
+        "code_id"
+      ],
+      "rows": 7985,
+      "sha256": "b9faf334431ac876a68c94ad8787a4491dd66c0ec808a045bc47f8baa230b8f0"
+    },
+    "data/complexity.jsonl.gz": {
+      "bytes": 558131,
+      "primary_key": [
+        "language",
+        "pair_id"
+      ],
+      "rows": 2700,
+      "sha256": "a132481af2110fba00b0c80cc6809246b0f22203900df6c586c5e9ae023581dc"
+    },
+    "data/error_analysis.jsonl.gz": {
+      "bytes": 2903838,
+      "primary_key": [
+        "result_id"
+      ],
+      "rows": 5370,
+      "sha256": "b27873c4bc0f1156017a383d3497a900e07af64d9717fe83728bc9f5f7fda082"
+    },
+    "data/main_judgments.jsonl.gz": {
+      "bytes": 25777279,
+      "primary_key": [
+        "result_id"
+      ],
+      "rows": 97200,
+      "sha256": "74beec7e79147bdcc79ff310f525b675d9153e628c260e174be94400c2110449"
+    },
+    "data/model_settings.json": {
+      "bytes": 1482,
+      "sha256": "110fd2931c8da996de97fd906c8ca8511435042c37cfd3320e7de014ed276bed"
+    },
+    "data/pairs.jsonl.gz": {
+      "bytes": 630843,
+      "primary_key": [
+        "language",
+        "pair_id"
+      ],
+      "rows": 2700,
+      "sha256": "dc3e29fc970ce3c4602d4696a3ebd9663f2c63b37c5ed4552d5e3847d562dda3"
+    },
+    "data/perturbation_applicability.jsonl.gz": {
+      "bytes": 929619,
+      "primary_key": [
+        "language",
+        "pair_id",
+        "operator",
+        "site"
+      ],
+      "rows": 40500,
+      "sha256": "5e0534ca7fd704a88919252bd193e354e49d4e867d42644b302e1f185cc9d9b1"
+    },
+    "data/perturbation_judgments.jsonl.gz": {
+      "bytes": 1748388,
+      "primary_key": [
+        "language",
+        "variant_id",
+        "direction"
+      ],
+      "rows": 71566,
+      "sha256": "58b5ce576c52efa80fdc6bafc00f154b7059bf2a8e0913a36973ba610ee33841"
+    },
+    "data/perturbation_variants.jsonl.gz": {
+      "bytes": 28864359,
+      "primary_key": [
+        "language",
+        "variant_id"
+      ],
+      "rows": 35783,
+      "sha256": "6c25386aeeb42b85f8dca43e0742e6553aa5ebe363282aa0a1f6daaaa49e9f80"
+    },
+    "data/ppl/association_results.json": {
+      "bytes": 283847,
+      "sha256": "9f63fc410bede7038ba9a2de591ac4ee864141734c97d213021284ce14dadb2a"
+    },
+    "data/ppl/pair_ppl_judgments.jsonl.gz": {
+      "bytes": 504840,
+      "primary_key": [
+        "language",
+        "pair_id"
+      ],
+      "rows": 2700,
+      "sha256": "90939bd8a85ea66c5035fe37e35b939434175da315a66ca298d18358169cec97"
+    },
+    "data/ppl/program_ppl.jsonl.gz": {
+      "bytes": 829199,
+      "primary_key": [
+        "code_key"
+      ],
+      "rows": 4455,
+      "sha256": "b5c17cfe83309cd0e41239e5e0e8c6f7487a47d93e3c3a761188766e77df611e"
+    },
+    "data/prompts.json": {
+      "bytes": 22981,
+      "sha256": "e040b64eb3b50bd9bee237852f5615ad08dca22a158ce8befc489e4a4351f0aa"
+    },
+    "data/repeat_judgments.jsonl.gz": {
+      "bytes": 124902,
+      "primary_key": [
+        "result_id"
+      ],
+      "rows": 4790,
+      "sha256": "3d2f8132e7558cfbd84f7dba5eb3a32bff9f4248a6a6abceb3f03bb689553d27"
+    },
+    "index/perturbation_cases.jsonl.gz": {
+      "bytes": 40392,
+      "primary_key": [
+        "language",
+        "pair_id",
+        "site"
+      ],
+      "rows": 5615,
+      "sha256": "20bc88cfbd623375f954c88ff984e6675001e64faacf6c8041b4bd7b7b8408c6"
+    },
+    "index/problems.jsonl.gz": {
+      "bytes": 38253,
+      "primary_key": [
+        "language",
+        "problem_id"
+      ],
+      "rows": 1441,
+      "sha256": "f01d2c01c38334d72b8ea7aec012fd7ec790656eb30e4f097cc39c84e88f79b5"
+    },
+    "scripts/bootstrap.py": {
+      "bytes": 3148,
+      "sha256": "9f99b2b6b3e6b89b7bbb078752e9bc0339db40ab7b1860cb901c1d9bc2cd4e60"
+    },
+    "scripts/data_tools.py": {
+      "bytes": 6080,
+      "sha256": "82cd75f4f30d7b937ffb2550e920e127a382c2361e42fe6fb0b72bc23a62d937"
+    },
+    "scripts/extract_features.py": {
+      "bytes": 7533,
+      "sha256": "77f590c8bfea412a089d12eb64ba46ff614d9ee2c9d094c061cefb0510dde46e"
+    },
+    "scripts/filter_and_sample.py": {
+      "bytes": 6892,
+      "sha256": "c1f11c7fb0369d1679707acac8239c01a9563b867a85e7d893e258830c7c0d72"
+    },
+    "scripts/paper_tables.py": {
+      "bytes": 5287,
+      "sha256": "e0b3f9e57d0e8d46704329f3e0d29cac210e9b02b2dd366c2e62ad84614bd85c"
+    },
+    "scripts/perturbation_statistics.py": {
+      "bytes": 14384,
+      "sha256": "d3049c5eee57b9a6aa213627f3427591a4fdf45459a94bc72632728177435d93"
+    },
+    "scripts/plot_model_orders.py": {
+      "bytes": 3493,
+      "sha256": "9658b42a12b0f8397d75d758b5f652c8f86b2ffcd4ef7f7a90b4663eb6dff6bd"
+    },
+    "scripts/plot_ppl.py": {
+      "bytes": 6718,
+      "sha256": "15e7d73aa2aebbc8f09218ef1c05a10eff34e7fcb87a8b57d8abbbbd3d8c6b04"
+    },
+    "scripts/recompute_ppl.py": {
+      "bytes": 7597,
+      "sha256": "3e5fc25afd18c7329baa8ba6eefcc8a9fe990c509a072959cebdacfede39e068"
+    },
+    "scripts/requirements.txt": {
+      "bytes": 250,
+      "sha256": "373721b78a26af865a639cce584ece0c2141035f74969c3e492320d22ee22f74"
+    }
+  },
+  "links": [
+    [
+      "data/pairs.jsonl.gz",
+      [
+        "language",
+        "problem_id"
+      ],
+      "index/problems.jsonl.gz",
+      [
+        "language",
+        "problem_id"
+      ]
+    ],
+    [
+      "data/main_judgments.jsonl.gz",
+      [
+        "language",
+        "pair_id"
+      ],
+      "data/pairs.jsonl.gz",
+      [
+        "language",
+        "pair_id"
+      ]
+    ],
+    [
+      "data/complexity.jsonl.gz",
+      [
+        "language",
+        "pair_id"
+      ],
+      "data/pairs.jsonl.gz",
+      [
+        "language",
+        "pair_id"
+      ]
+    ],
+    [
+      "data/error_analysis.jsonl.gz",
+      [
+        "result_id"
+      ],
+      "data/main_judgments.jsonl.gz",
+      [
+        "result_id"
+      ]
+    ],
+    [
+      "data/baseline_predictions.jsonl.gz",
+      [
+        "language",
+        "pair_id"
+      ],
+      "data/pairs.jsonl.gz",
+      [
+        "language",
+        "pair_id"
+      ]
+    ],
+    [
+      "data/baseline_features.jsonl.gz",
+      [
+        "language",
+        "code_id"
+      ],
+      "data/code.jsonl.gz",
+      [
+        "language",
+        "code_id"
+      ]
+    ],
+    [
+      "data/perturbation_variants.jsonl.gz",
+      [
+        "language",
+        "pair_id"
+      ],
+      "data/pairs.jsonl.gz",
+      [
+        "language",
+        "pair_id"
+      ]
+    ],
+    [
+      "data/perturbation_judgments.jsonl.gz",
+      [
+        "language",
+        "variant_id"
+      ],
+      "data/perturbation_variants.jsonl.gz",
+      [
+        "language",
+        "variant_id"
+      ]
+    ],
+    [
+      "data/pairs.jsonl.gz",
+      [
+        "language",
+        "slow_code_id"
+      ],
+      "data/code.jsonl.gz",
+      [
+        "language",
+        "code_id"
+      ]
+    ],
+    [
+      "data/pairs.jsonl.gz",
+      [
+        "language",
+        "fast_code_id"
+      ],
+      "data/code.jsonl.gz",
+      [
+        "language",
+        "code_id"
+      ]
+    ],
+    [
+      "data/pairs.jsonl.gz",
+      [
+        "language",
+        "measured_slow_code_id"
+      ],
+      "data/code.jsonl.gz",
+      [
+        "language",
+        "code_id"
+      ]
+    ],
+    [
+      "data/pairs.jsonl.gz",
+      [
+        "language",
+        "measured_fast_code_id"
+      ],
+      "data/code.jsonl.gz",
+      [
+        "language",
+        "code_id"
+      ]
+    ],
+    [
+      "data/ppl/pair_ppl_judgments.jsonl.gz",
+      [
+        "language",
+        "pair_id"
+      ],
+      "data/pairs.jsonl.gz",
+      [
+        "language",
+        "pair_id"
+      ]
+    ],
+    [
+      "data/ppl/pair_ppl_judgments.jsonl.gz",
+      [
+        "slow_code_key"
+      ],
+      "data/ppl/program_ppl.jsonl.gz",
+      [
+        "code_key"
+      ]
+    ],
+    [
+      "data/ppl/pair_ppl_judgments.jsonl.gz",
+      [
+        "fast_code_key"
+      ],
+      "data/ppl/program_ppl.jsonl.gz",
+      [
+        "code_key"
+      ]
+    ],
+    [
+      "data/repeat_judgments.jsonl.gz",
+      [
+        "result_id"
+      ],
+      "data/main_judgments.jsonl.gz",
+      [
+        "result_id"
+      ]
+    ],
+    [
+      "index/perturbation_cases.jsonl.gz",
+      [
+        "language",
+        "pair_id"
+      ],
+      "data/pairs.jsonl.gz",
+      [
+        "language",
+        "pair_id"
+      ]
+    ]
+  ],
+  "paper_results": {
+    "figure_1": "Illustration in manuscript (no experimental observation)",
+    "figure_2": [
+      "scripts/filter_and_sample.py",
+      "data/pairs.jsonl.gz"
+    ],
+    "figure_3": [
+      "scripts/plot_model_orders.py",
+      "scripts/paper_tables.py#model_language_prompt"
+    ],
+    "figure_4": [
+      "scripts/plot_ppl.py",
+      "data/ppl/association_results.json"
+    ],
+    "figure_5": [
+      "scripts/paper_tables.py#caller_guard_result_id",
+      "data/error_analysis.jsonl.gz",
+      "data/main_judgments.jsonl.gz"
+    ],
+    "rq2_language_ratio": "scripts/paper_tables.py#language_by_ratio",
+    "rq3_unedited_repeat": [
+      "scripts/paper_tables.py#unedited_repeat",
+      "data/repeat_judgments.jsonl.gz"
+    ],
+    "table_I": "Comparison of cited studies (Section II)",
+    "table_II": "Measurement protocol in manuscript; final labels in data/pairs.jsonl.gz",
+    "table_III": "scripts/paper_tables.py#dataset",
+    "table_IV": [
+      "data/model_settings.json",
+      "data/prompts.json"
+    ],
+    "table_IX": "scripts/paper_tables.py#complexity_by_model",
+    "table_V": [
+      "scripts/bootstrap.py",
+      "scripts/paper_tables.py#model_by_prompt"
+    ],
+    "table_VI": [
+      "scripts/data_tools.py baseline",
+      "scripts/bootstrap.py"
+    ],
+    "table_VII": [
+      "scripts/bootstrap.py",
+      "scripts/paper_tables.py#prompt_means"
+    ],
+    "table_VIII": [
+      "scripts/perturbation_statistics.py",
+      "index/perturbation_cases.jsonl.gz"
+    ],
+    "table_X": "scripts/paper_tables.py#error_categories"
+  }
+}
