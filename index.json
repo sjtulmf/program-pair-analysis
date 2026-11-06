@@ -19,8 +19,8 @@
   },
   "files": {
     "README.md": {
-      "bytes": 5440,
-      "sha256": "5968cb1c7d55b3d4de58df32283b1e93249e0d11fad71d1846c5faac2c98893e"
+      "bytes": 5177,
+      "sha256": "257b8c8aaac3f6de8e10ffc223d653743448fdd3ab1fc5fb3a1b6dd42791a53c"
     },
     "data/baseline_features.jsonl.gz": {
       "bytes": 255912,
@@ -60,24 +60,20 @@
       "sha256": "a132481af2110fba00b0c80cc6809246b0f22203900df6c586c5e9ae023581dc"
     },
     "data/error_analysis.jsonl.gz": {
-      "bytes": 2903838,
+      "bytes": 2919544,
       "primary_key": [
         "result_id"
       ],
       "rows": 5370,
-      "sha256": "b27873c4bc0f1156017a383d3497a900e07af64d9717fe83728bc9f5f7fda082"
+      "sha256": "de0a66022b3c54d67d68e47b9b0f856161af0658a72092da2d8e8f34eb8206e6"
     },
     "data/main_judgments.jsonl.gz": {
-      "bytes": 25777279,
+      "bytes": 24953053,
       "primary_key": [
         "result_id"
       ],
       "rows": 97200,
-      "sha256": "74beec7e79147bdcc79ff310f525b675d9153e628c260e174be94400c2110449"
-    },
-    "data/model_settings.json": {
-      "bytes": 1482,
-      "sha256": "110fd2931c8da996de97fd906c8ca8511435042c37cfd3320e7de014ed276bed"
+      "sha256": "5001c92a028e2ae13e6b8b03db1eec89a539c4ef632f37941f9832daeef71326"
     },
     "data/pairs.jsonl.gz": {
       "bytes": 630843,
@@ -437,7 +433,6 @@
     "table_II": "Measurement protocol in manuscript; final labels in data/pairs.jsonl.gz",
     "table_III": "scripts/paper_tables.py#dataset",
     "table_IV": [
-      "data/model_settings.json",
       "data/prompts.json"
     ],
     "table_IX": "scripts/paper_tables.py#complexity_by_model",
