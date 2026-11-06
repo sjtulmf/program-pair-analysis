@@ -1,4 +1,4 @@
-# CodeEffiJudge analysis package
+# Program Pair Analysis
 
 This archive contains the 2,700 labeled program pairs, their displayed code, the model judgments and the data and scripts used to analyze those judgments. All analyses below start from the saved execution-cost labels. The test inputs, expected program outputs, per-run measurements and native timing audit are outside the scope of this archive. Independently rerunning the benchmark programs or deriving the labels from repeated executions requires those materials. We plan to make the full replication package public upon acceptance.
 
