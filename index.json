@@ -19,8 +19,8 @@
   },
   "files": {
     "README.md": {
-      "bytes": 5177,
-      "sha256": "257b8c8aaac3f6de8e10ffc223d653743448fdd3ab1fc5fb3a1b6dd42791a53c"
+      "bytes": 5220,
+      "sha256": "1447d57d92df2ab47515bd0f5005855d81d20943105b286e45ba5f575605ab40"
     },
     "data/baseline_features.jsonl.gz": {
       "bytes": 255912,
@@ -60,12 +60,16 @@
       "sha256": "a132481af2110fba00b0c80cc6809246b0f22203900df6c586c5e9ae023581dc"
     },
     "data/error_analysis.jsonl.gz": {
-      "bytes": 2919544,
+      "bytes": 1281299,
       "primary_key": [
         "result_id"
       ],
       "rows": 5370,
-      "sha256": "de0a66022b3c54d67d68e47b9b0f856161af0658a72092da2d8e8f34eb8206e6"
+      "sha256": "388825b172bff106223065ee796a9ae1c6bbaa021431990b30f3f4a18d920394"
+    },
+    "data/figure5_case.json": {
+      "bytes": 2908,
+      "sha256": "79d83893dff8391087fe5e2af6bd428d1b2364e54d8df27e33ec440301b6a5dc"
     },
     "data/main_judgments.jsonl.gz": {
       "bytes": 24953053,
@@ -106,13 +110,13 @@
       "sha256": "58b5ce576c52efa80fdc6bafc00f154b7059bf2a8e0913a36973ba610ee33841"
     },
     "data/perturbation_variants.jsonl.gz": {
-      "bytes": 28864359,
+      "bytes": 27287760,
       "primary_key": [
         "language",
         "variant_id"
       ],
       "rows": 35783,
-      "sha256": "6c25386aeeb42b85f8dca43e0742e6553aa5ebe363282aa0a1f6daaaa49e9f80"
+      "sha256": "652c98549e72911fe7ff6af2e77d06c3686565e6f44368d02952aaac11e81b51"
     },
     "data/ppl/association_results.json": {
       "bytes": 283847,
@@ -183,8 +187,8 @@
       "sha256": "c1f11c7fb0369d1679707acac8239c01a9563b867a85e7d893e258830c7c0d72"
     },
     "scripts/paper_tables.py": {
-      "bytes": 5287,
-      "sha256": "e0b3f9e57d0e8d46704329f3e0d29cac210e9b02b2dd366c2e62ad84614bd85c"
+      "bytes": 4955,
+      "sha256": "43290cee88021a09b4d234c9b597f9a2947a88760dd61a2847ab96d8d0eb3fd2"
     },
     "scripts/perturbation_statistics.py": {
       "bytes": 14384,
@@ -419,39 +423,34 @@
       "scripts/plot_ppl.py",
       "data/ppl/association_results.json"
     ],
-    "figure_5": [
-      "scripts/paper_tables.py#caller_guard_result_id",
-      "data/error_analysis.jsonl.gz",
-      "data/main_judgments.jsonl.gz"
-    ],
-    "rq2_language_ratio": "scripts/paper_tables.py#language_by_ratio",
+    "figure_5": "data/figure5_case.json",
+    "dataset_statistics": "scripts/paper_tables.py#dataset",
     "rq3_unedited_repeat": [
       "scripts/paper_tables.py#unedited_repeat",
       "data/repeat_judgments.jsonl.gz"
     ],
     "table_I": "Comparison of cited studies (Section II)",
-    "table_II": "Measurement protocol in manuscript; final labels in data/pairs.jsonl.gz",
-    "table_III": "scripts/paper_tables.py#dataset",
-    "table_IV": [
+    "table_II": [
+      "data/main_judgments.jsonl.gz",
       "data/prompts.json"
     ],
-    "table_IX": "scripts/paper_tables.py#complexity_by_model",
-    "table_V": [
+    "table_III": [
       "scripts/bootstrap.py",
       "scripts/paper_tables.py#model_by_prompt"
     ],
-    "table_VI": [
+    "table_IV": [
       "scripts/data_tools.py baseline",
       "scripts/bootstrap.py"
     ],
-    "table_VII": [
+    "table_V": [
       "scripts/bootstrap.py",
       "scripts/paper_tables.py#prompt_means"
     ],
-    "table_VIII": [
+    "table_VI": [
       "scripts/perturbation_statistics.py",
       "index/perturbation_cases.jsonl.gz"
     ],
-    "table_X": "scripts/paper_tables.py#error_categories"
+    "table_VII": "scripts/paper_tables.py#complexity",
+    "table_VIII": "scripts/paper_tables.py#error_categories"
   }
 }

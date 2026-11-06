@@ -79,10 +79,7 @@ def main():
         data[lang] = {'pairs': len(subset), 'problems': len({r['problem_id'] for r in subset}),
                       'measured_implementations': len({(r['problem_id'], r[k+'_id']) for r in subset for k in ('slow', 'fast')}),
                       'displayed_sources': len({r[k+'_code_id'] for r in subset for k in ('slow', 'fast')})}
-    guard = [r['result_id'] for r in load('data/main_judgments.jsonl.gz')
-             if r['pair_id'] == 'pie_41431' and r['mode'] == 'cot' and r['model'] == 'qwen3.8-flash'
-             and 'lack of a zero-check' in (r['answer_text'] or '')]
-    assert len(guard) == 1 and guard[0] in {r['result_id'] for r in errors}
+    figure5 = json.loads((ROOT / 'data/figure5_case.json').read_text(encoding='utf8'))
     def aggregate(group):
         return {'/'.join(k) if isinstance(k, tuple) else k: scores(v) for k, v in sorted(group.items())}
     return {'dataset': data, 'model_means': aggregate(by_model),
@@ -93,7 +90,7 @@ def main():
             'prompt_means': aggregate(by_prompt), 'unedited_repeat': control,
             'complexity': {'/'.join(k): dict(scores(v), pairs=groups[k]) for k, v in sorted(by_complexity.items())},
             'error_categories': dict(sorted(categories.items())),
-            'caller_guard_result_id': guard[0]}
+            'figure5_pair_id': figure5['pair_id']}
 
 
 if __name__ == '__main__':
